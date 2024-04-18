@@ -2,13 +2,16 @@ import { useState } from 'react'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import RestaurantListPage from './pages/RestaurantListPage'
+import HomePage from './pages/HomePage'
+
 
 function App() {
 
   return (
     <>
     <Routes>
-      <Route path="/" element={<RestaurantListPage />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/:postcode" element={<RestaurantListPage />} />
     </Routes>
     </>
   )

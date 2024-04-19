@@ -29,13 +29,17 @@ useEffect(() => {
         ? <p>Loading...</p>
         : restaurants.map(restaurant => {
             return(
-                <div key={restaurant.id}>
-                    <h1>{restaurant.name}</h1>
-                    <h2>{restaurant.cuisines.map(cuisine => cuisine.name).join(', ')}</h2>
-                    <h2>{restaurant.rating.starRating}</h2>
-                    <h2>{restaurant.address.firstLine}</h2>
-                    <h2>{restaurant.address.postalCode}</h2>
-                    <h2>{restaurant.address.city}</h2>
+                <div className="restaurant-card" key={restaurant.id}>
+                    <div className="restaurant-info">
+                        <h2>{restaurant.name}</h2>
+                        <h3>{restaurant.cuisines.map(cuisine => cuisine.name).join(', ')}</h3>
+                        <h3><span><img className="rating-logo" src="https://www.svgrepo.com/show/13695/star.svg" alt="text" /></span>{restaurant.rating.starRating}</h3>
+                    </div>
+                    <div className="restaurant-address">
+                        <h3>{restaurant.address.firstLine}</h3>
+                        <h3>{restaurant.address.postalCode}</h3>
+                        <h3>{restaurant.address.city}</h3>
+                    </div>
                 </div>
             )
         })

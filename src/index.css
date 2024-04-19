@@ -22,11 +22,12 @@
   height: 90px;
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;;
+  position: sticky;
 }
 
 .company-logo {
-  width: 10%;
-  padding-top: 8px;
+  width: 150px;
+  padding-left: 10px;
 }
 
 .search-body {
@@ -34,7 +35,7 @@
   margin: 150px 300px;
   padding: 10px 10px 40px 10px;
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   border-radius: 10px;
 }
 
@@ -60,4 +61,24 @@
   border-radius: 10px;
   padding: 8px;
 
+}
+
+.restaurant-card {
+ background-color: white;
+ margin: 20px 50px;
+ box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+ border-radius: 20px;
+ padding: 10px 50px;
+ display: flex;
+ justify-content: space-between;
+}
+
+.restaurant-address {
+  text-align: right;
+  font-style: italic;
+}
+
+.rating-logo {
+  width: 20px;
+  margin-right:8px;
 }

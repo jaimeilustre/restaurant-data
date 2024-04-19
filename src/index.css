@@ -6,11 +6,36 @@
   color-scheme: light dark;
   color: black;
   background-color: white;
+  background-image: url(https://img.freepik.com/free-vector/fast-food-pattern_1108-194.jpg?w=1060&t=st=1713526093~exp=1713526693~hmac=2871bfb7cc981be272819043ef72536793575f20d4e5ef8549d5990e65d026ef);
+  background-size: cover;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar {
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  height: 90px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;;
+}
+
+.company-logo {
+  width: 10%;
+  padding-top: 8px;
+}
+
+.search-body {
+  text-align: center;
+  margin: 150px 300px;
+  padding: 10px 10px 40px 10px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-radius: 10px;
 }
 
 .search-bar input {

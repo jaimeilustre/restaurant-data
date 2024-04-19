@@ -1,28 +1,39 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 function HomePage () {
 
 const [searchPostcode, setSearchPostcode] = useState('')
+const navigate = useNavigate()
 
 const searchHandler = (e) => {
     setSearchPostcode(e.target.value)
 }
 
-    return (
-        <>
-            <h1>Search restaurants in your area</h1>
-            <input
-                type="text"
-                value={searchPostcode}
-                onChange={searchHandler}
-                placeholder="Type postcode here..."
-            />
+const searchButtonHandler = () => {
+    if(searchPostcode !== "") {
+        navigate(`restaurants/${searchPostcode}`)
+    } else {
+        alert('Please enter a postcode')
+    }
+}
 
-            <Link to={`restaurants/${searchPostcode}`}>
-                <button>Search</button>
-            </Link>
-        </>
+    return (
+        <div className="search-body">
+            <h1 className="search-header">Search restaurants in your area</h1>
+
+            <div className="search-bar">
+                <input
+                    type="text"
+                    value={searchPostcode}
+                    onChange={searchHandler}
+                    placeholder="Type postcode here..."
+                />
+
+                <button onClick={searchButtonHandler}>Search</button>
+
+            </div>
+        </div>
     ) 
 }
 

@@ -1,4 +1,4 @@
-# Coding Assignment: Displaying Restaurant Data
+# Coding Assignment: Displaying Restaurant Data (Frontend)
 
 - Platform: Web application
 - Language: Javascript
@@ -7,7 +7,7 @@
 
 ## Steps to build and compile the React app
 
-1. Navigate to the directory you want to save your React app
+1. Navigate to the directory you want to save your app
 2. Using Vite, create your app with the following code:
     ``` bash
     npm create vite@latest name-of-app -- --template react
@@ -23,22 +23,17 @@
     npm install react router dom
     npm install axios
     ```
-5. From there, proceed with creating the app with all the requirements you need to meet
+5. From there, proceed with the app with all the requirements you need to meet
 
 ## Steps to run the app locally
 
 1. Fork this repo and clone it
-2. Navigate to this directory and run the following codes:
+2. Navigate to this directory and run the following code to install the relevant dependencies:
     ``` bash
     npm install
     code .
     ```
-3. Once opened, install the foloowing dependency:
-    ``` bash
-    npm install react router dom
-    npm install axios
-    ```
-4. Once all the dependencies in the previous step have been installed, run the app locally with the following code:
+3. Once done, run the app locally with the following code:
     ``` bash
     npm run dev
     ```

@@ -9,7 +9,7 @@ const {postcode} = useParams()
 
 // Fetching data from API
 const getApiData = () => {
-    axios.get(`http://localhost:5001/restaurants/${postcode}`)
+    axios.get(`http://localhost:5005/restaurants/${postcode}`)
     .then(response => {
         setRestaurants(response.data.restaurants.slice(0, 10))
     })

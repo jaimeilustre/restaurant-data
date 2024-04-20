@@ -1,8 +1,28 @@
-# React + Vite
+# Coding Assignment: Displaying Restaurant Data
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Platform: Web application
+Language: Javascript
+Library: React
 
-Currently, two official plugins are available:
+## Steps to build the app using React
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Steps to run the app locally
+
+1. Fork this repo and clone it
+2. Navigate to this directory and run the following codes:
+    ``` bash
+    npm install
+    code -r .
+    ```
+3. Once all the dependencies in the previous step have been installed, run the app locally with the following code:
+    ``` bash
+    npm run dev
+    ```
+
+## Assumptions and things that were not clear
+
+## Improvements for future development
+- Create a filter function with the cuisines by either making a drop down menu to pick the cuisines of your choice or listing all the cuisines and making them clickable to filter your favourites.
+- Use a map to display the address of the restaurant since the coordinates are present in the API. This can be done by using a react map package or using Google Map's developer features.
+- Create a sorting function where you can sort the restaurants by their name or rating for example.

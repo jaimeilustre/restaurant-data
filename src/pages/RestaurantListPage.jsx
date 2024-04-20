@@ -33,7 +33,7 @@ useEffect(() => {
                     <div className="restaurant-info">
                         <h2>{restaurant.name}</h2>
                         <h3>{restaurant.cuisines.map(cuisine => cuisine.name).join(', ')}</h3>
-                        <h3><span><img className="rating-logo" src="https://www.svgrepo.com/show/13695/star.svg" alt="text" /></span>{restaurant.rating.starRating}</h3>
+                        <h3><span><img className="rating-logo" src="https://www.svgrepo.com/show/13695/star.svg" alt="text" /></span>{restaurant.rating.starRating}<span> ({restaurant.rating.count})</span></h3>
                     </div>
                     <div className="restaurant-address">
                         <h3>{restaurant.address.firstLine}</h3>

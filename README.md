@@ -1,11 +1,29 @@
 # Coding Assignment: Displaying Restaurant Data
 
-Platform: Web application
-Language: Javascript
-Library: React
+- Platform: Web application
+- Language: Javascript
+- Library: React
+- Code editor: Visual Studio Code
 
-## Steps to build the app using React
+## Steps to build and compile the React app
 
+1. Navigate to the directory you want to save your React app
+2. Using Vite, create your app with the following code:
+    ``` bash
+    npm create vite@latest name-of-app -- --template react
+    ```
+3. Navigate to this newly created directory and run the following commands
+    ``` bash
+    npm install 
+    code .
+    npm run dev
+    ```
+4. Once done, install the relevant dependencies. In this case it would be:
+    ``` bash
+    npm install react router dom
+    npm install axios
+    ```
+5. From there, proceed with creating the app with all the requirements you need to meet
 
 ## Steps to run the app locally
 
@@ -13,14 +31,20 @@ Library: React
 2. Navigate to this directory and run the following codes:
     ``` bash
     npm install
-    code -r .
+    code .
     ```
-3. Once all the dependencies in the previous step have been installed, run the app locally with the following code:
+3. Once opened, install the foloowing dependency:
+    ``` bash
+    npm install react router dom
+    npm install axios
+    ```
+4. Once all the dependencies in the previous step have been installed, run the app locally with the following code:
     ``` bash
     npm run dev
     ```
 
-## Assumptions and things that were not clear
+## Assumptions or things that were not clear
+
 
 ## Improvements for future development
 - Create a filter function with the cuisines by either making a drop down menu to pick the cuisines of your choice or listing all the cuisines and making them clickable to filter your favourites.

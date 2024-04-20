@@ -5,6 +5,9 @@
 - Library: React
 - Code editor: Visual Studio Code
 
+## Link to the Backend
+https://github.com/jaimeilustre/restaurant-data-proxy-server
+
 ## Steps to build and compile the React app
 
 1. Navigate to the directory you want to save your app

@@ -4,6 +4,7 @@
 - Language: Javascript
 - Library: React
 - Code editor: Visual Studio Code
+- Preferred browser to run application: Google Chrome
 
 ## Link to the Backend
 https://github.com/jaimeilustre/restaurant-data-proxy-server
@@ -42,7 +43,9 @@ https://github.com/jaimeilustre/restaurant-data-proxy-server
     ```
 
 ## Assumptions or things that were not clear
-
+- Regarding the postcode, I wasn't sure if I had to add a feature where it would check the validity of the postcode and whether the postcode input is empty or not but thinking about it from an end user perspective, it would make sense to include one and it wouldn't take much time to write. What I ended up doing:
+    - If postcode field is empty, it sends an alert on your browser
+    - If it is an invalid UK postcode, a piece of text will appear briefly reminding you to enter a valid one
 
 ## Improvements for future development
 - Create a filter function with the cuisines by either making a drop down menu to pick the cuisines of your choice or listing all the cuisines and making them clickable to filter your favourites.

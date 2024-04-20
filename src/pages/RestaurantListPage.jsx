@@ -12,6 +12,7 @@ const getApiData = () => {
     axios.get(`http://localhost:5005/restaurants/${postcode}`)
     .then(response => {
         setRestaurants(response.data.restaurants.slice(0, 10))
+        console.log(typeof response.data.restaurants[0].rating.starRating)
     })
     .catch(error => {
         console.log("Error not receiving data")
@@ -33,7 +34,10 @@ useEffect(() => {
                     <div className="restaurant-info">
                         <h2>{restaurant.name}</h2>
                         <h3>{restaurant.cuisines.map(cuisine => cuisine.name).join(', ')}</h3>
-                        <h3><span><img className="rating-logo" src="https://www.svgrepo.com/show/13695/star.svg" alt="text" /></span>{restaurant.rating.starRating}<span> ({restaurant.rating.count})</span></h3>
+                        <h3>
+                            <img className="rating-logo" src="https://www.svgrepo.com/show/13695/star.svg" alt="text" />
+                            <span>{parseFloat(restaurant.rating.starRating)}</span>
+                        </h3>
                     </div>
                     <div className="restaurant-address">
                         <h3>{restaurant.address.firstLine}</h3>

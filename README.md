@@ -41,6 +41,10 @@ https://github.com/jaimeilustre/restaurant-data-proxy-server
     ``` bash
     npm run dev
     ```
+4. Create an .env file in the root folder and create the following environment variable:
+    ``` bash
+    VITE_API_URL = "http://localhost:5005/restaurants/"
+    ```
 
 ## Assumptions or things that were not clear
 - Regarding the postcode, I wasn't sure if I had to add a feature where it would check the validity of the postcode and whether the postcode input is empty or not but thinking about it from an end user perspective, it would make sense to include one and it wouldn't take much time to write. What I ended up doing:

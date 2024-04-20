@@ -7,12 +7,13 @@ function RestaurantListPage() {
 const [restaurants, setRestaurants] = useState([])
 const {postcode} = useParams()
 
+const apiUrl = import.meta.env.VITE_API_URL
+
 // Fetching data from API
 const getApiData = () => {
-    axios.get(`http://localhost:5005/restaurants/${postcode}`)
+    axios.get(`${apiUrl}${postcode}`)
     .then(response => {
         setRestaurants(response.data.restaurants.slice(0, 10))
-        console.log(typeof response.data.restaurants[0].rating.starRating)
     })
     .catch(error => {
         console.log("Error not receiving data")

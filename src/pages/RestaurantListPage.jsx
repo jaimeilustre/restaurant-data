@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import star from "../assets/star.svg"
 
 function RestaurantListPage() {
 
@@ -36,7 +37,7 @@ useEffect(() => {
                         <h2>{restaurant.name}</h2>
                         <h3>{restaurant.cuisines.map(cuisine => cuisine.name).join(', ')}</h3>
                         <h3>
-                            <img className="rating-logo" src="https://www.svgrepo.com/show/13695/star.svg" alt="text" />
+                            <img className="rating-logo" src={star} alt="text" />
                             <span>{parseFloat(restaurant.rating.starRating)}</span>
                         </h3>
                     </div>

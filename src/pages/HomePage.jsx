@@ -1,21 +1,27 @@
 import { useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 function HomePage () {
 
+    // Creating our state variables
     const [searchPostcode, setSearchPostcode] = useState('')
     const [validPostcode, setValidPostcode] = useState(true)
+
+    // A hook to help us navigate later
     const navigate = useNavigate()
 
+    // Search handler for our onChange input handler
     const searchHandler = (e) => {
         setSearchPostcode(e.target.value)
     }
 
-    const postcodeRegex = /^[A-Z]{1,2}[0-9][A-Z0-9]? [0-9][A-Z]{2}$/i
-  
+    // A RegEx to check that the postcode is a valid UK one
+    const postcodeRegEx = /^[A-Z]{1,2}[0-9][A-Z0-9]? [0-9][A-Z]{2}$/i
+
+    // Search handler for our onClick button handler
     const searchButtonHandler = () => {
         if (searchPostcode !== "") {
-            if (postcodeRegex.test(searchPostcode)) {
+            if (postcodeRegEx.test(searchPostcode)) {
                 navigate(`restaurants/${searchPostcode}`)
             } else {
                 setValidPostcode(false)

@@ -9,12 +9,12 @@ function App() {
   return (
     <>
 
-    <Navbar />
+      <Navbar />
 
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/restaurants/:postcode" element={<RestaurantListPage />} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/restaurants/:postcode" element={<RestaurantListPage />} />
+      </Routes>
     </>
   )
 }

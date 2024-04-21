@@ -1,7 +1,7 @@
 # Coding Assignment: Displaying Restaurant Data (Frontend)
 
 - Platform: Web application
-- Languages: Javascript and CSS
+- Languages: Javascript, CSS, and HTML
 - Library: React
 - Code editor: Visual Studio Code
 - Preferred browser to run application: Google Chrome
@@ -78,7 +78,7 @@ https://github.com/jaimeilustre/restaurant-data-proxy-server
 8. Navigate to the `App.jsx` then import `Route` and `Routes` from `react-router-dom` to set up routes within our React app. Once imported, create the routes you need. In this case, we need two routes for the two pages we created in the previous step. The following code should look like this:
     ``` bash
     // App.jsx
-    //...
+    // ...
 
     import { Route, Routes } from 'react-router-dom'
     import RestaurantListPage from './pages/RestaurantListPage'
@@ -96,7 +96,27 @@ https://github.com/jaimeilustre/restaurant-data-proxy-server
     ```
   Note here as well both pages were also imported. Please test the pages and the paths to ensure everything is working before proceeding to the next steps.
 
-9. Navigate to the `RestaurantListPage.jsx` to begin constructing the page to display the list of restaurants. First, we can begin by creating the state variable for the restaurant. This is what it would look like:
+9. Create an `.env` file in the root folder and create the following environment variable:
+    ``` bash
+    // .env
+    // ...
+
+    VITE_API_URL = "http://localhost:5005/restaurants/"
+    ```
+    IMPORTANT: Add the `.env` file in the `.gitignore` file that is already present in the root folder to prevent committing this file to Git. This is what it would look like:
+    ``` bash
+    // .env
+    // ...
+
+    node_modules
+    dist
+    dist-ssr
+    *.local
+
+    .env
+    ```
+
+10. Navigate to the `RestaurantListPage.jsx` to begin constructing the page to display the list of restaurants. First, we can begin by creating the state variable for the restaurant. This is what it would look like:
     ``` bash
     // .src/pages/RestaurantListPage.jsx
     // ...
@@ -109,7 +129,7 @@ https://github.com/jaimeilustre/restaurant-data-proxy-server
     - A state variable `restaurants` is declared and the function `setRestaurants` is used to update the variable.
     - The initial state is set as an empty array.
 
-10. Next thing to do is create the `GET` request for the restaurant data using the Express server we created acting on our behalf on requesting the data from the Just Eat API. This is what it would look like:
+11. Next thing to do is create the `GET` request for the restaurant data using the Express server we created acting on our behalf on requesting the data from the Just Eat API. This is what it would look like:
     ``` bash
     // .src/pages/RestaurantListPage.jsx
     // ...
@@ -142,7 +162,7 @@ https://github.com/jaimeilustre/restaurant-data-proxy-server
     - If not successful, then the `.catch()` is executed where the error and error message is logged to the console.
     - The `useEffect` hook is then used to optionally perform side effects. The function `getApiData` (which is whwere we saved our `GET` request) is called within this hook. The dependency array `[]` is left empty in this case, which means it will only run once after the component is mounted.
 
-11. After that, we can start rendering the data on our frontend with the following code:
+12. After that, we can start rendering the data on our frontend with the following code:
     ``` bash
     // .src/pages/RestaurantListPage.jsx
     // ...
@@ -181,9 +201,9 @@ https://github.com/jaimeilustre/restaurant-data-proxy-server
         - For the cuisines, as the values are stored in an array, we then use the `.map()` method again to create a new array for the cuisines. Using `.join(', ')` at the end, we can then display these cuisines next to each other with a space and comma in between.
         - For the rating, a star logo is added next to the rating number to make it look more realistic and for the rating number, `parseFloat()` is added to ensure that the number is properly rendered as a number and not a string.
 
-12. Please check that everything is working on this page before proceeding with the `HomePage.jsx`.
+13. Please check that everything is working on this page before proceeding with the `HomePage.jsx`.
 
-13. Navigate to the `HomePage.jsx` to begin constructing the page with the search bar. First, like before, we can start by creating the state variables. This is what it would look like:
+14. Navigate to the `HomePage.jsx` to begin constructing the page with the search bar. First, like before, we can start by creating the state variables. This is what it would look like:
     ``` bash
     // .src/pages/HomePage.jsx
     // ...
@@ -195,7 +215,7 @@ https://github.com/jaimeilustre/restaurant-data-proxy-server
     - The first `useState` hook declares a `searchPostcode` variable with its respective function to update its values. This is where we store the postcode we type in the search bar. Its initial value is set as an empty string
     - The second `useState` hook declares a `validPostcode` variable with its respective function to update its values. More will be explained later, but this is where we would store whether the postcode entered is a valid UK one (true) or not (false). Its initial value is set to true.
 
-14. Next thing to do is to create a search handler to handle what happens when we click the search button. This is what it would look like:
+15. Next thing to do is to create a search handler to handle what happens when we click the search button. This is what it would look like:
     ``` bash
     // .src/pages/HomePage.jsx
     // ...
@@ -241,7 +261,7 @@ https://github.com/jaimeilustre/restaurant-data-proxy-server
         - If not a valid postcode, we then update our `validPostcode` state variable to false and we use a `setTimeout()` to set the state variable back to true. This is done as later in the rendering part, a message will pop up briefly reminding to input a valid UK postcdode.
         - On the other hand, if the postcode field in the search bar is empty, then an alert on your browser will pop up stating to enter a postcode.
 
-15. After that, we can start rendering the data on our frontend with the following code:
+16. After that, we can start rendering the data on our frontend with the following code:
     ``` bash
     // .src/pages/HomePage.jsx
     // ...
@@ -276,13 +296,13 @@ https://github.com/jaimeilustre/restaurant-data-proxy-server
     - A button is then created with `searchButtonHandler` as our event handler in the `onClick`.
     - Lastly, as mentioned previously, when the state variable `validPostcode` is set to false, a brief message pops up for one second to remind you to enter a valid UK postcode.
 
-16. Please check that everything is working and if it is, congratulations, the app is officially done. Feel free to add some basic CSS to ensure that the data is displayed clearly.
+17. Please check that everything is working and if it is, congratulations, the app is officially done. Feel free to add some basic CSS to ensure that the data is displayed clearly.
 
 ### OPTIONAL: A navbar can also be created to help navigate to the home page quickly and if interested, will be outlined in the next steps.
 
-17. Create a navbar component by first creating a folder in your root folder called `components` and within that folder create a component called `Navbar.jsx`.
+18. Create a navbar component by first creating a folder in your root folder called `components` and within that folder create a component called `Navbar.jsx`.
 
-18. For a simple navbar using the company's logo, the following code should look like this:
+19. For a simple navbar using the company's logo, the following code should look like this:
     ``` bash
     // .src/components/Navbar.jsx
     // ...
@@ -308,7 +328,7 @@ https://github.com/jaimeilustre/restaurant-data-proxy-server
     - A saved `companyLogo` is also imported for use later.
     - Under a `<nav>` tag, the `companyLogo` is used with `Link` wrapped around it with a specified path to navigate to the home page. This means that if you click the logo, it takes you to the home page.
 
-19. The last step for the navbar is to navigate back to the `App.jsx` file and import it and render it to see it on your react app. It should look like this:
+20. The last step for the navbar is to navigate back to the `App.jsx` file and import it and render it to see it on your react app. It should look like this:
     ``` bash
     // App.jsx
     // ...

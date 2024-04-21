@@ -9,8 +9,27 @@
 ## Link to the Backend
 https://github.com/jaimeilustre/restaurant-data-proxy-server
 
-## Steps to build and compile the React app
+## Steps to run the app locally
+1. Fork this repo and clone it.
+2. Navigate to this directory and run the following code to install the relevant dependencies:
+    ``` bash
+    npm install
+    code .
+    ```
+3. Once done, run the app locally with the following code:
+    ``` bash
+    npm run dev
+    ```
+4. Create an `.env` file in the root folder and create the following environment variable:
+    ``` bash
+    // .env
+    //...
 
+    VITE_API_URL = "http://localhost:5005/restaurants/"
+    ```
+    Please note that your server may be running in a different port, so feel free to adjust the port number as needed.
+
+## Steps to build and compile the React app
 1. Navigate to the directory you want to save your app.
 2. Using Vite, create your app with the following code:
     ``` bash
@@ -103,6 +122,8 @@ https://github.com/jaimeilustre/restaurant-data-proxy-server
 
     VITE_API_URL = "http://localhost:5005/restaurants/"
     ```
+    Please note that your server may be running in a different port, so feel free to adjust the port number as needed.
+    
     IMPORTANT: Add the `.env` file in the `.gitignore` file that is already present in the root folder to prevent committing this file to Git. This is what it would look like:
     ``` bash
     // .env
@@ -348,26 +369,6 @@ https://github.com/jaimeilustre/restaurant-data-proxy-server
         </Routes>
         </>
     )
-    ```
-
-## Steps to run the app locally
-
-1. Fork this repo and clone it.
-2. Navigate to this directory and run the following code to install the relevant dependencies:
-    ``` bash
-    npm install
-    code .
-    ```
-3. Once done, run the app locally with the following code:
-    ``` bash
-    npm run dev
-    ```
-4. Create an `.env` file in the root folder and create the following environment variable:
-    ``` bash
-    // .env
-    //...
-
-    VITE_API_URL = "http://localhost:5005/restaurants/"
     ```
 
 ## Assumptions or things that were not clear

@@ -94,7 +94,7 @@ https://github.com/jaimeilustre/restaurant-data-proxy-server
     </>
     )
     ```
-  Note here as well both pages were also imported. Please test the pages and the paths to ensure everything is working before proceeding to the next steps.
+    Note here as well both pages were also imported. Please test the pages and the paths to ensure everything is working before proceeding to the next steps.
 
 9. Create an `.env` file in the root folder and create the following environment variable:
     ``` bash

@@ -123,7 +123,7 @@ https://github.com/jaimeilustre/restaurant-data-proxy-server
     VITE_API_URL = "http://localhost:5005/restaurants/"
     ```
     Please note that your server may be running in a different port, so feel free to adjust the port number as needed.
-    
+
     IMPORTANT: Add the `.env` file in the `.gitignore` file that is already present in the root folder to prevent committing this file to Git. This is what it would look like:
     ``` bash
     // .env
@@ -150,7 +150,7 @@ https://github.com/jaimeilustre/restaurant-data-proxy-server
     - A state variable `restaurants` is declared and the function `setRestaurants` is used to update the variable.
     - The initial state is set as an empty array.
 
-11. Next thing to do is create the `GET` request for the restaurant data using the Express server we created acting on our behalf on requesting the data from the Just Eat API. This is what it would look like:
+11. Next thing to do is create the `GET` request for the restaurant data using the Express server we created to request the data from the Just Eat API. This is what it would look like:
     ``` bash
     // .src/pages/RestaurantListPage.jsx
     // ...
